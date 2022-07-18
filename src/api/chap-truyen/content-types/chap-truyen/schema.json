@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "chap_truyens",
+  "info": {
+    "singularName": "chap-truyen",
+    "pluralName": "chap-truyens",
+    "displayName": "ChapTruyen"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "TieuDe": {
+      "type": "string"
+    },
+    "ChapNum": {
+      "type": "biginteger"
+    },
+    "NoiDung": {
+      "type": "text"
+    },
+    "ten_truyen": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::ten-truyen.ten-truyen",
+      "inversedBy": "chap_truyens"
+    }
+  }
+}
