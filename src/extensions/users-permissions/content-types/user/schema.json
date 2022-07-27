@@ -63,20 +63,20 @@
       "inversedBy": "users",
       "configurable": false
     },
-    "TenConverter": {
+    "ten_converter": {
       "type": "string"
     },
-    "TenUser": {
+    "ten_user": {
       "type": "string"
     },
-    "Tuoi": {
+    "tuoi": {
       "type": "integer"
     },
-    "ten_truyens": {
+    "truyen_da_dich": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::ten-truyen.ten-truyen",
-      "mappedBy": "users_permissions_user"
+      "mappedBy": "dich_gia"
     }
   }
 }

@@ -4,27 +4,28 @@
   "info": {
     "singularName": "chap-truyen",
     "pluralName": "chap-truyens",
-    "displayName": "ChapTruyen"
+    "displayName": "ChapTruyen",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "TieuDe": {
+    "tieu_de": {
       "type": "string"
     },
-    "ChapNum": {
+    "chap_number": {
       "type": "biginteger"
     },
-    "NoiDung": {
+    "noi_dung": {
       "type": "text"
     },
     "ten_truyen": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::ten-truyen.ten-truyen",
-      "inversedBy": "chap_truyens"
+      "inversedBy": "chap_truyen"
     }
   }
 }

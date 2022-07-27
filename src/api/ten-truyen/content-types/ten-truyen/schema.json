@@ -12,50 +12,60 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "TenTruyen": {
+    "tieu_de_truyen": {
       "type": "string"
     },
-    "SoChuong": {
+    "so_chuong": {
       "type": "biginteger"
     },
-    "LuotView": {
+    "luot_view": {
       "type": "biginteger"
     },
-    "LuotThich": {
+    "luot_thich": {
       "type": "biginteger"
     },
-    "MaTacGia": {
-      "type": "string"
-    },
-    "MaTheLoai": {
-      "type": "string"
-    },
-    "TrangThai": {
-      "type": "string"
-    },
-    "tac_gia": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::tac-gia.tac-gia",
-      "inversedBy": "ten_truyens"
-    },
-    "the_loais": {
+    "the_loai": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::the-loai.the-loai",
       "inversedBy": "ten_truyens"
     },
-    "users_permissions_user": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "plugin::users-permissions.user",
-      "inversedBy": "ten_truyens"
-    },
-    "chap_truyens": {
+    "chap_truyen": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::chap-truyen.chap-truyen",
+      "private": true,
       "mappedBy": "ten_truyen"
+    },
+    "dich_gia": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "truyen_da_dich"
+    },
+    "trang_thai": {
+      "type": "enumeration",
+      "enum": [
+        "Hoàn tất",
+        "Đang ra",
+        "Drop"
+      ]
+    },
+    "tac_gia": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::tac-gia.tac-gia",
+      "inversedBy": "truyen_sang_tac"
+    },
+    "img_truyen": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

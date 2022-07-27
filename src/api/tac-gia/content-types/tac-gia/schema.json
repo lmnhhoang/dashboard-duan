@@ -4,20 +4,21 @@
   "info": {
     "singularName": "tac-gia",
     "pluralName": "tac-gias",
-    "displayName": "TacGia"
+    "displayName": "TacGia",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "ButDanh": {
+    "but_danh": {
       "type": "string"
     },
-    "TenThat": {
+    "ten_tac_gia": {
       "type": "string"
     },
-    "ten_truyens": {
+    "truyen_sang_tac": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::ten-truyen.ten-truyen",

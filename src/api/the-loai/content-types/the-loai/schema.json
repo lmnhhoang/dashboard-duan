@@ -4,21 +4,22 @@
   "info": {
     "singularName": "the-loai",
     "pluralName": "the-loais",
-    "displayName": "TheLoai"
+    "displayName": "TheLoai",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "TenTheLoai": {
+    "ten_the_loai": {
       "type": "string"
     },
     "ten_truyens": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::ten-truyen.ten-truyen",
-      "inversedBy": "the_loais"
+      "mappedBy": "the_loai"
     }
   }
 }
